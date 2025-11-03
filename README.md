@@ -9,6 +9,15 @@ This project was part of my #100DaysOfCode journey.
 - Scoreboard to keep track of points  
 - Dividing line for better layout
 
+## How to Play
+- **Right Paddle:** Use the **Up** and **Down** arrow keys  
+- **Left Paddle:** Use the **W** and **S** keys  
+- Keep the ball from going past your paddle.  
+- The first player to let the ball pass loses a point!
+
+## Goal of the Game
+Keep the ball in play and try to score by making your opponent miss!
+
 ## Files
 - `main.py` – runs the game  
 - `paddle.py` – paddle class and movement  
