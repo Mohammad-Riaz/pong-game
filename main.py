@@ -5,28 +5,31 @@ from scoreboard import Scoreboard
 from line import Line
 import time
 
-
+# Creating the Screen
 screen = Screen()
 screen.setup(width=800, height=600)
 screen.bgcolor("black")
 screen.title("Pong")
 screen.tracer(0)
 
+# Creating in game Objects
 right_paddle = Paddle((350, 0))
 left_paddle = Paddle((-350, 0))
 ball = Ball()
 scoreboard = Scoreboard()
 line = Line()
 
-
+# Listening for keyboard inputs for the Paddle
 screen.listen()
 screen.onkeypress(key="Up", fun=right_paddle.go_up)
 screen.onkeypress(key="Down", fun=right_paddle.go_down)
 screen.onkeypress(key="w", fun=left_paddle.go_up)
 screen.onkeypress(key="s", fun=left_paddle.go_down)
 
+# Running the game
 game_is_on = True
 while game_is_on:
+    # Moving the ball
     time.sleep(ball.move_speed)
     ball.move()
     screen.update()
